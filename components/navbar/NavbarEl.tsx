@@ -5,12 +5,18 @@ const ACTIVE_STYLE_BUTTON =
 const ACTIVE_STYLE_SPAN =
   "relative px-5 py-2 bg-white dark:bg-gray-900 rounded-md transition-all";
 const INACTIVE_STYLE_BUTTON =
-  "py-2 text-white text-sm transition-all ease-in delay-50";
+  "py-2 px-2 text-white text-sm transition-all ease-in delay-50";
 const INACTIVE_STYLE_SPAN = "transition-all";
+
 function NavbarEl(data: NavbarProps) {
+  const setActive = function (event: React.MouseEvent) {
+    event.preventDefault();
+    data.setActiveItem(Number.parseInt(event.currentTarget.id));
+    data.refJump();
+  };
   return (
     <button
-      onClick={data.setActive}
+      onClick={setActive}
       className={
         data.activeItem == Number.parseInt(data.id)
           ? ACTIVE_STYLE_BUTTON

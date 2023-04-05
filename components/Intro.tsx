@@ -15,6 +15,7 @@ function Intro() {
         alt="Profile picture"
         width={500}
         height={500}
+        priority
       ></Image>
       <div className="flex-col mt-28 ml-4">
         Gamal Lautaro Lascano Hassen

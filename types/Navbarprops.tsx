@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, SetStateAction, MutableRefObject } from "react";
 interface NavbarProps {
   activeItem: number;
   id: string;
   children: ReactNode;
-  setActive: (event: React.MouseEvent) => void;
+  setActiveItem: (value: SetStateAction<number>) => void;
+  refJump: () => void;
 }
 export default NavbarProps;
