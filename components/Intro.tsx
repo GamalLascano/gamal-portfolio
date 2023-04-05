@@ -3,6 +3,7 @@ import { Raleway } from "@next/font/google";
 const raleway = Raleway({
   weight: "600",
   style: "normal",
+  subsets: ["latin"],
 });
 function Intro() {
   const cl = `mt-24 text-6xl pb-2 pt-2 flex ${raleway.className}`;
