@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Raleway } from "@next/font/google";
+import { Raleway } from "next/font/google";
 const raleway = Raleway({
   weight: "600",
   style: "normal",
