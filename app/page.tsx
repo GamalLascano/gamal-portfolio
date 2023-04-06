@@ -21,13 +21,14 @@ export default function Home() {
   return (
     <Fragment>
       <Navbar exp={jumpToExp} port={jumpToPort} inicio={jumpToInicio} />
-      <div style={{ scrollMargin: "100px" }} ref={inicioRef}>
+      <div style={{ scrollMargin: "100px" }} ref={inicioRef} id="one">
         <Intro />
       </div>
       <h4
         style={{ scrollMargin: "100px" }}
         ref={portRef}
         className="text-5xl text-white text-center my-2"
+        id="two"
       >
         PORTFOLIO
       </h4>
@@ -42,7 +43,11 @@ export default function Home() {
           ></Card>
         ))}
       </div>
-      <h4 ref={expRef} className="text-5xl text-white text-center my-2">
+      <h4
+        ref={expRef}
+        className="text-5xl text-white text-center my-2"
+        id="three"
+      >
         EXPERIENCE
       </h4>
       <div className="flex flex-wrap justify-center mt-8">
